@@ -478,3 +478,5 @@ async def global_error_handler(request: Request, exc: Exception):
             "message": "internal server error"
         }
     )
+from workers import asgi
+Default = asgi.entrypoint(app)
